@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Lunch Check</title>
+</head>
+
+<body ng-app="LunchCheck">
+    <div ng-controller="LunchCheckController">
+        <div class="col-md-offset-3">
+            <h1>Lunch Check Application</h1>
+        </div><br>
+        <div class="col-md-offset-3 col-md-4">
+            <input class="form-control" type="text" name="lunch" ng-model="lunch" />
+        </div>
+        <div class="col-md-4">
+            <button ng-click=checkLunch(); class="btn btn-primary">Check If Too Much</button>
+        </div><br><br><br>
+        <div class="col-md-offset-3 col-md-4 alert alert{{alertStyle}}">{{message}}</div>
+    </div>
+</body>
+
+</html>
